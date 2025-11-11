@@ -1,0 +1,258 @@
+20:00:43.376 Running build in Washington, D.C., USA (East) – iad1
+20:00:43.377 Build machine configuration: 2 cores, 8 GB
+20:00:43.498 Cloning github.com/likhonsdevbd/vibe-cua (Branch: main, Commit: 0cd0a20)
+20:00:43.499 Previous build caches not available.
+20:00:43.711 Cloning completed: 213.000ms
+20:00:44.081 Warning: Detected "engines": { "node": ">=18.0.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: http://vercel.link/node-version
+20:00:44.082 Running "vercel build"
+20:00:44.473 Vercel CLI 48.9.0
+20:00:45.042 Warning: Detected "engines": { "node": ">=18.0.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: http://vercel.link/node-version
+20:00:45.045 Installing dependencies...
+20:00:47.303 Collecting google-generativeai>=0.8.3 (from -r /vercel/path0/requirements.txt (line 2))
+20:00:47.355   Downloading google_generativeai-0.8.5-py3-none-any.whl.metadata (3.9 kB)
+20:00:47.443 Collecting playwright>=1.48.0 (from -r /vercel/path0/requirements.txt (line 3))
+20:00:47.458   Downloading playwright-1.55.0-py3-none-manylinux1_x86_64.whl.metadata (3.5 kB)
+20:00:47.481 Collecting asyncio (from -r /vercel/path0/requirements.txt (line 4))
+20:00:47.495   Downloading asyncio-4.0.0-py3-none-any.whl.metadata (994 bytes)
+20:00:47.560 Collecting logging (from -r /vercel/path0/requirements.txt (line 5))
+20:00:47.595   Downloading logging-0.4.9.6.tar.gz (96 kB)
+20:00:47.620      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.0/96.0 kB 5.9 MB/s eta 0:00:00
+20:00:47.633   Installing build dependencies: started
+20:00:49.166   Installing build dependencies: finished with status 'done'
+20:00:49.167   Getting requirements to build wheel: started
+20:00:49.338   Getting requirements to build wheel: finished with status 'done'
+20:00:49.340   Preparing metadata (pyproject.toml): started
+20:00:49.612   Preparing metadata (pyproject.toml): finished with status 'done'
+20:00:49.636 Collecting dataclasses (from -r /vercel/path0/requirements.txt (line 6))
+20:00:49.648   Downloading dataclasses-0.6-py3-none-any.whl.metadata (3.0 kB)
+20:00:49.669 Collecting pathlib (from -r /vercel/path0/requirements.txt (line 7))
+20:00:49.681   Downloading pathlib-1.0.1-py3-none-any.whl.metadata (5.1 kB)
+20:00:49.713 Collecting typing-extensions (from -r /vercel/path0/requirements.txt (line 8))
+20:00:49.723   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+20:00:49.788 Collecting pytest>=8.0.0 (from -r /vercel/path0/requirements.txt (line 11))
+20:00:49.797   Downloading pytest-9.0.0-py3-none-any.whl.metadata (7.6 kB)
+20:00:49.831 Collecting pytest-asyncio>=0.24.0 (from -r /vercel/path0/requirements.txt (line 12))
+20:00:49.857   Downloading pytest_asyncio-1.3.0-py3-none-any.whl.metadata (4.1 kB)
+20:00:49.933 Collecting black>=24.0.0 (from -r /vercel/path0/requirements.txt (line 13))
+20:00:49.947   Downloading black-25.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (85 kB)
+20:00:49.952      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.2/85.2 kB 13.7 MB/s eta 0:00:00
+20:00:49.995 Collecting flake8>=7.0.0 (from -r /vercel/path0/requirements.txt (line 14))
+20:00:50.008   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+20:00:50.129 Collecting mypy>=1.10.0 (from -r /vercel/path0/requirements.txt (line 15))
+20:00:50.146   Downloading mypy-1.18.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.2 kB)
+20:00:50.192 Collecting google-ai-generativelanguage==0.6.15 (from google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:50.205   Downloading google_ai_generativelanguage-0.6.15-py3-none-any.whl.metadata (5.7 kB)
+20:00:50.267 Collecting google-api-core (from google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:50.277   Downloading google_api_core-2.28.1-py3-none-any.whl.metadata (3.3 kB)
+20:00:50.360 Collecting google-api-python-client (from google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:50.375   Downloading google_api_python_client-2.187.0-py3-none-any.whl.metadata (7.0 kB)
+20:00:50.503 Collecting google-auth>=2.15.0 (from google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:50.514   Downloading google_auth-2.43.0-py2.py3-none-any.whl.metadata (6.6 kB)
+20:00:50.708 Collecting protobuf (from google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:50.735   Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+20:00:50.906 Collecting pydantic (from google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:50.921   Downloading pydantic-2.12.4-py3-none-any.whl.metadata (89 kB)
+20:00:50.926      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.9/89.9 kB 23.4 MB/s eta 0:00:00
+20:00:50.986 Collecting tqdm (from google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:51.010   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+20:00:51.014      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 26.5 MB/s eta 0:00:00
+20:00:51.106 Collecting proto-plus<2.0.0dev,>=1.22.3 (from google-ai-generativelanguage==0.6.15->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:51.118   Downloading proto_plus-1.26.1-py3-none-any.whl.metadata (2.2 kB)
+20:00:51.155 Collecting protobuf (from google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:51.167   Downloading protobuf-5.29.5-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+20:00:51.198 Collecting pyee<14,>=13 (from playwright>=1.48.0->-r /vercel/path0/requirements.txt (line 3))
+20:00:51.210   Downloading pyee-13.0.0-py3-none-any.whl.metadata (2.9 kB)
+20:00:51.343 Collecting greenlet<4.0.0,>=3.1.1 (from playwright>=1.48.0->-r /vercel/path0/requirements.txt (line 3))
+20:00:51.356   Downloading greenlet-3.2.4-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+20:00:51.392 Collecting iniconfig>=1.0.1 (from pytest>=8.0.0->-r /vercel/path0/requirements.txt (line 11))
+20:00:51.401   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+20:00:51.431 Collecting packaging>=22 (from pytest>=8.0.0->-r /vercel/path0/requirements.txt (line 11))
+20:00:51.449   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+20:00:51.477 Collecting pluggy<2,>=1.5 (from pytest>=8.0.0->-r /vercel/path0/requirements.txt (line 11))
+20:00:51.487   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+20:00:51.522 Collecting pygments>=2.7.2 (from pytest>=8.0.0->-r /vercel/path0/requirements.txt (line 11))
+20:00:51.532   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+20:00:51.590 Collecting click>=8.0.0 (from black>=24.0.0->-r /vercel/path0/requirements.txt (line 13))
+20:00:51.599   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+20:00:51.620 Collecting mypy-extensions>=0.4.3 (from black>=24.0.0->-r /vercel/path0/requirements.txt (line 13))
+20:00:51.632   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+20:00:51.661 Collecting pathspec>=0.9.0 (from black>=24.0.0->-r /vercel/path0/requirements.txt (line 13))
+20:00:51.676   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+20:00:51.713 Collecting platformdirs>=2 (from black>=24.0.0->-r /vercel/path0/requirements.txt (line 13))
+20:00:51.734   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+20:00:51.757 Collecting pytokens>=0.3.0 (from black>=24.0.0->-r /vercel/path0/requirements.txt (line 13))
+20:00:51.773   Downloading pytokens-0.3.0-py3-none-any.whl.metadata (2.0 kB)
+20:00:51.834 Collecting mccabe<0.8.0,>=0.7.0 (from flake8>=7.0.0->-r /vercel/path0/requirements.txt (line 14))
+20:00:51.845   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+20:00:51.879 Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8>=7.0.0->-r /vercel/path0/requirements.txt (line 14))
+20:00:51.888   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+20:00:51.939 Collecting pyflakes<3.5.0,>=3.4.0 (from flake8>=7.0.0->-r /vercel/path0/requirements.txt (line 14))
+20:00:51.951   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+20:00:52.056 Collecting googleapis-common-protos<2.0.0,>=1.56.2 (from google-api-core->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:52.099   Downloading googleapis_common_protos-1.72.0-py3-none-any.whl.metadata (9.4 kB)
+20:00:52.207 Collecting requests<3.0.0,>=2.18.0 (from google-api-core->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:52.219   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+20:00:52.273 Collecting cachetools<7.0,>=2.0.0 (from google-auth>=2.15.0->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:52.282   Downloading cachetools-6.2.1-py3-none-any.whl.metadata (5.5 kB)
+20:00:52.311 Collecting pyasn1-modules>=0.2.1 (from google-auth>=2.15.0->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:52.323   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+20:00:52.360 Collecting rsa<5,>=3.1.4 (from google-auth>=2.15.0->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:52.369   Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+20:00:52.475 Collecting httplib2<1.0.0,>=0.19.0 (from google-api-python-client->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:52.488   Downloading httplib2-0.31.0-py3-none-any.whl.metadata (2.2 kB)
+20:00:52.534 Collecting google-auth-httplib2<1.0.0,>=0.2.0 (from google-api-python-client->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:52.548   Downloading google_auth_httplib2-0.2.1-py3-none-any.whl.metadata (3.0 kB)
+20:00:52.618 Collecting uritemplate<5,>=3.0.1 (from google-api-python-client->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:52.683   Downloading uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+20:00:52.716 Collecting annotated-types>=0.6.0 (from pydantic->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:52.726   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+20:00:53.469 Collecting pydantic-core==2.41.5 (from pydantic->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:53.481   Downloading pydantic_core-2.41.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+20:00:53.507 Collecting typing-inspection>=0.4.2 (from pydantic->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:53.521   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+20:00:54.140 Collecting grpcio<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:54.165   Downloading grpcio-1.76.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+20:00:54.246 Collecting grpcio-status<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:54.266   Downloading grpcio_status-1.76.0-py3-none-any.whl.metadata (1.1 kB)
+20:00:54.346 Collecting pyparsing<4,>=3.0.4 (from httplib2<1.0.0,>=0.19.0->google-api-python-client->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:54.361   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+20:00:54.462 Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth>=2.15.0->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:54.483   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+20:00:54.584 Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.18.0->google-api-core->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:54.608   Downloading charset_normalizer-3.4.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+20:00:54.651 Collecting idna<4,>=2.5 (from requests<3.0.0,>=2.18.0->google-api-core->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:54.711   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+20:00:54.853 Collecting urllib3<3,>=1.21.1 (from requests<3.0.0,>=2.18.0->google-api-core->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:54.872   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+20:00:54.902 Collecting certifi>=2017.4.17 (from requests<3.0.0,>=2.18.0->google-api-core->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:54.912   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+20:00:55.010 INFO: pip is looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+20:00:55.014 Collecting grpcio-status<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.1->google-ai-generativelanguage==0.6.15->google-generativeai>=0.8.3->-r /vercel/path0/requirements.txt (line 2))
+20:00:55.026   Downloading grpcio_status-1.75.1-py3-none-any.whl.metadata (1.1 kB)
+20:00:55.057   Downloading grpcio_status-1.75.0-py3-none-any.whl.metadata (1.1 kB)
+20:00:55.081   Downloading grpcio_status-1.74.0-py3-none-any.whl.metadata (1.1 kB)
+20:00:55.100   Downloading grpcio_status-1.73.1-py3-none-any.whl.metadata (1.1 kB)
+20:00:55.140   Downloading grpcio_status-1.73.0-py3-none-any.whl.metadata (1.1 kB)
+20:00:55.179   Downloading grpcio_status-1.72.2-py3-none-any.whl.metadata (1.1 kB)
+20:00:55.208   Downloading grpcio_status-1.72.1-py3-none-any.whl.metadata (1.1 kB)
+20:00:55.216 INFO: pip is still looking at multiple versions of grpcio-status to determine which version is compatible with other requirements. This could take a while.
+20:00:55.237   Downloading grpcio_status-1.71.2-py3-none-any.whl.metadata (1.1 kB)
+20:00:55.357 Downloading google_generativeai-0.8.5-py3-none-any.whl (155 kB)
+20:00:55.363    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.4/155.4 kB 41.4 MB/s eta 0:00:00
+20:00:55.377 Downloading google_ai_generativelanguage-0.6.15-py3-none-any.whl (1.3 MB)
+20:00:55.412    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 41.9 MB/s eta 0:00:00
+20:00:55.425 Downloading playwright-1.55.0-py3-none-manylinux1_x86_64.whl (45.9 MB)
+20:00:56.657    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.9/45.9 MB 18.0 MB/s eta 0:00:00
+20:00:56.669 Downloading asyncio-4.0.0-py3-none-any.whl (5.6 kB)
+20:00:56.685 Downloading dataclasses-0.6-py3-none-any.whl (14 kB)
+20:00:56.698 Downloading pathlib-1.0.1-py3-none-any.whl (14 kB)
+20:00:56.712 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+20:00:56.718    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 10.4 MB/s eta 0:00:00
+20:00:56.730 Downloading pytest-9.0.0-py3-none-any.whl (373 kB)
+20:00:56.739    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 373.4/373.4 kB 62.3 MB/s eta 0:00:00
+20:00:56.752 Downloading pytest_asyncio-1.3.0-py3-none-any.whl (15 kB)
+20:00:56.770 Downloading black-25.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+20:00:56.791    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 94.7 MB/s eta 0:00:00
+20:00:56.818 Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+20:00:56.825    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.9/57.9 kB 10.2 MB/s eta 0:00:00
+20:00:56.841 Downloading mypy-1.18.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (13.3 MB)
+20:00:57.023    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.3/13.3 MB 65.1 MB/s eta 0:00:00
+20:00:57.033 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+20:00:57.040    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 20.4 MB/s eta 0:00:00
+20:00:57.050 Downloading google_api_core-2.28.1-py3-none-any.whl (173 kB)
+20:00:57.056    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 173.7/173.7 kB 42.8 MB/s eta 0:00:00
+20:00:57.066 Downloading google_auth-2.43.0-py2.py3-none-any.whl (223 kB)
+20:00:57.072    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 223.1/223.1 kB 60.7 MB/s eta 0:00:00
+20:00:57.092 Downloading greenlet-3.2.4-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (607 kB)
+20:00:57.100    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 607.6/607.6 kB 136.2 MB/s eta 0:00:00
+20:00:57.110 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+20:00:57.184 Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+20:00:57.195 Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+20:00:57.215 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+20:00:57.219    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 26.6 MB/s eta 0:00:00
+20:00:57.230 Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+20:00:57.241 Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+20:00:57.253 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+20:00:57.268 Downloading protobuf-5.29.5-cp38-abi3-manylinux2014_x86_64.whl (319 kB)
+20:00:57.273    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 319.9/319.9 kB 121.2 MB/s eta 0:00:00
+20:00:57.284 Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+20:00:57.297 Downloading pyee-13.0.0-py3-none-any.whl (15 kB)
+20:00:57.313 Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+20:00:57.317    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 kB 35.3 MB/s eta 0:00:00
+20:00:57.326 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+20:00:57.353    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 49.5 MB/s eta 0:00:00
+20:00:57.365 Downloading pytokens-0.3.0-py3-none-any.whl (12 kB)
+20:00:57.400 Downloading google_api_python_client-2.187.0-py3-none-any.whl (14.6 MB)
+20:00:57.576    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.6/14.6 MB 84.2 MB/s eta 0:00:00
+20:00:57.588 Downloading pydantic-2.12.4-py3-none-any.whl (463 kB)
+20:00:57.594    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 463.4/463.4 kB 143.2 MB/s eta 0:00:00
+20:00:57.609 Downloading pydantic_core-2.41.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+20:00:57.685    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 30.1 MB/s eta 0:00:00
+20:00:57.691 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+20:00:57.697    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 33.3 MB/s eta 0:00:00
+20:00:57.707 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+20:00:57.720 Downloading cachetools-6.2.1-py3-none-any.whl (11 kB)
+20:00:57.734 Downloading google_auth_httplib2-0.2.1-py3-none-any.whl (9.5 kB)
+20:00:57.747 Downloading googleapis_common_protos-1.72.0-py3-none-any.whl (297 kB)
+20:00:57.753    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 297.5/297.5 kB 97.3 MB/s eta 0:00:00
+20:00:57.768 Downloading httplib2-0.31.0-py3-none-any.whl (91 kB)
+20:00:57.775    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 18.5 MB/s eta 0:00:00
+20:00:57.783 Downloading proto_plus-1.26.1-py3-none-any.whl (50 kB)
+20:00:57.790    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.2/50.2 kB 9.5 MB/s eta 0:00:00
+20:00:57.799 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+20:00:57.804    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 74.7 MB/s eta 0:00:00
+20:00:57.813 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+20:00:57.817    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 33.5 MB/s eta 0:00:00
+20:00:57.827 Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
+20:00:57.843 Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+20:00:57.859 Downloading uritemplate-4.2.0-py3-none-any.whl (11 kB)
+20:00:57.870 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+20:00:57.876    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 48.0 MB/s eta 0:00:00
+20:00:57.886 Downloading charset_normalizer-3.4.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+20:00:57.891    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 153.5/153.5 kB 68.8 MB/s eta 0:00:00
+20:00:57.908 Downloading grpcio-1.76.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.6 MB)
+20:00:57.967    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 115.3 MB/s eta 0:00:00
+20:00:57.981 Downloading grpcio_status-1.71.2-py3-none-any.whl (14 kB)
+20:00:57.993 Downloading idna-3.11-py3-none-any.whl (71 kB)
+20:00:57.997    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 37.9 MB/s eta 0:00:00
+20:00:58.007 Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+20:00:58.014    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 14.6 MB/s eta 0:00:00
+20:00:58.024 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+20:00:58.028    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 51.4 MB/s eta 0:00:00
+20:00:58.038 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+20:00:58.042    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 68.1 MB/s eta 0:00:00
+20:00:58.183 Building wheels for collected packages: logging
+20:00:58.184   Building wheel for logging (pyproject.toml): started
+20:00:58.414   Building wheel for logging (pyproject.toml): finished with status 'done'
+20:00:58.415   Created wheel for logging: filename=logging-0.4.9.6-py3-none-any.whl size=29591 sha256=7e1712de1378b161aadea554954ae61ea0e14a1f1b21200156dc67e3b6b6e03d
+20:00:58.415   Stored in directory: /vercel/.cache/pip/wheels/c2/46/de/9ff6b7043ccdbac300a6f5b61d6220c8f2e9984f7abbf53d96
+20:00:58.417 Successfully built logging
+20:00:58.593 Installing collected packages: pathlib, logging, dataclasses, urllib3, uritemplate, typing-extensions, tqdm, pytokens, pyparsing, pygments, pyflakes, pycodestyle, pyasn1, protobuf, pluggy, platformdirs, pathspec, packaging, mypy-extensions, mccabe, iniconfig, idna, greenlet, click, charset_normalizer, certifi, cachetools, asyncio, annotated-types, typing-inspection, rsa, requests, pytest, pyee, pydantic-core, pyasn1-modules, proto-plus, mypy, httplib2, grpcio, googleapis-common-protos, flake8, black, pytest-asyncio, pydantic, playwright, grpcio-status, google-auth, google-auth-httplib2, google-api-core, google-api-python-client, google-ai-generativelanguage, google-generativeai
+20:01:05.566 Successfully installed annotated-types-0.7.0 asyncio-4.0.0 black-25.11.0 cachetools-6.2.1 certifi-2025.10.5 charset_normalizer-3.4.4 click-8.3.0 dataclasses-0.6 flake8-7.3.0 google-ai-generativelanguage-0.6.15 google-api-core-2.28.1 google-api-python-client-2.187.0 google-auth-2.43.0 google-auth-httplib2-0.2.1 google-generativeai-0.8.5 googleapis-common-protos-1.72.0 greenlet-3.2.4 grpcio-1.76.0 grpcio-status-1.71.2 httplib2-0.31.0 idna-3.11 iniconfig-2.3.0 logging-0.4.9.6 mccabe-0.7.0 mypy-1.18.2 mypy-extensions-1.1.0 packaging-25.0 pathlib-1.0.1 pathspec-0.12.1 platformdirs-4.5.0 playwright-1.55.0 pluggy-1.6.0 proto-plus-1.26.1 protobuf-5.29.5 pyasn1-0.6.1 pyasn1-modules-0.4.2 pycodestyle-2.14.0 pydantic-2.12.4 pydantic-core-2.41.5 pyee-13.0.0 pyflakes-3.4.0 pygments-2.19.2 pyparsing-3.2.5 pytest-9.0.0 pytest-asyncio-1.3.0 pytokens-0.3.0 requests-2.32.5 rsa-4.9.1 tqdm-4.67.1 typing-extensions-4.15.0 typing-inspection-0.4.2 uritemplate-4.2.0 urllib3-2.5.0
+20:01:05.569 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+20:01:06.352 Installing dependencies...
+20:01:10.640 npm error code ERESOLVE
+20:01:10.641 npm error ERESOLVE unable to resolve dependency tree
+20:01:10.641 npm error
+20:01:10.641 npm error While resolving: production-computer-use-agent@1.0.0
+20:01:10.642 npm error Found: eslint@9.39.1
+20:01:10.642 npm error node_modules/eslint
+20:01:10.642 npm error   dev eslint@"^9.0.0" from the root project
+20:01:10.642 npm error
+20:01:10.642 npm error Could not resolve dependency:
+20:01:10.642 npm error peer eslint@"^8.56.0" from @typescript-eslint/parser@7.18.0
+20:01:10.643 npm error node_modules/@typescript-eslint/parser
+20:01:10.643 npm error   dev @typescript-eslint/parser@"^7.7.0" from the root project
+20:01:10.643 npm error   peer @typescript-eslint/parser@"^7.0.0" from @typescript-eslint/eslint-plugin@7.18.0
+20:01:10.643 npm error   node_modules/@typescript-eslint/eslint-plugin
+20:01:10.643 npm error     dev @typescript-eslint/eslint-plugin@"^7.7.0" from the root project
+20:01:10.643 npm error
+20:01:10.643 npm error Fix the upstream dependency conflict, or retry
+20:01:10.643 npm error this command with --force or --legacy-peer-deps
+20:01:10.643 npm error to accept an incorrect (and potentially broken) dependency resolution.
+20:01:10.644 npm error
+20:01:10.644 npm error
+20:01:10.644 npm error For a full report see:
+20:01:10.644 npm error /vercel/.npm/_logs/2025-11-11T02_01_06_619Z-eresolve-report.txt
+20:01:10.644 npm error A complete log of this run can be found in: /vercel/.npm/_logs/2025-11-11T02_01_06_619Z-debug-0.log
+20:01:10.684 Error: Command "npm install" exited with 1
