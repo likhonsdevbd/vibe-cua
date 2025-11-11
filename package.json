@@ -2,21 +2,22 @@
   "name": "production-computer-use-agent",
   "version": "1.0.0",
   "description": "Production-ready computer use agent using Vercel AI SDK and Google Gemini",
-  "main": "dist/production_agent.js",
-  "types": "dist/production_agent.d.ts",
+  "main": "dist/google_ai_computer_agent.js",
+  "types": "dist/google_ai_computer_agent.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node production_agent.ts",
-    "start": "node dist/production_agent.js",
+    "dev": "ts-node google_ai_computer_agent.ts",
+    "start": "node dist/google_ai_computer_agent.js",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "jest --testPathPattern=unit",
     "test:integration": "jest --testPathPattern=integration",
-    "lint": "eslint production_agent.ts --ext .ts",
-    "format": "prettier --write production_agent.ts",
+    "lint": "eslint google_ai_computer_agent.ts --ext .ts",
+    "format": "prettier --write google_ai_computer_agent.ts",
     "type-check": "tsc --noEmit",
     "setup": "npm install && npx playwright install",
     "example:web-research": "ts-node examples/web_research.ts",
-    "example:form-filling": "ts-node examples/form_filling.ts"
+    "example:form-filling": "ts-node examples/form_filling.ts",
+    "example:google-ai": "ts-node google_ai_computer_agent.ts"
   },
   "keywords": [
     "ai",
@@ -33,6 +34,7 @@
   "license": "MIT",
   "dependencies": {
     "ai": "^6.8.2",
+    "@ai-sdk/google": "^1.2.0",
     "zod": "^3.23.8",
     "playwright": "^1.48.0"
   },

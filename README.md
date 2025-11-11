@@ -1,23 +1,25 @@
-# Production Computer Use Agent
+# Google AI Computer Use Agent
 
-**A production-ready, safety-first computer use agent built with Vercel AI SDK and Google Gemini**
+**A production-ready computer use agent built with Vercel AI SDK and Google Generative AI**
 
-> ⚠️ **Note**: Gemini 2.5 Computer Use is still in preview. Use in production with appropriate monitoring and safety measures.
+> ⚠️ **Note**: This implementation uses the official Google Generative AI provider for Vercel AI SDK (`@ai-sdk/google`). Ensure you have a valid Google API key and proper model access.
 
-This production computer use agent implements industry best practices for AI-powered automation while maintaining strict safety standards. Built using the Vercel AI SDK's Agent patterns, it provides enterprise-grade reliability, comprehensive monitoring, and security-first design.
+This production computer use agent implements industry best practices for AI-powered automation while maintaining strict safety standards. Built using the Vercel AI SDK with the official Google Generative AI provider, it provides enterprise-grade reliability, comprehensive monitoring, and security-first design.
 
 ## ✨ Key Features
 
 ### Core Capabilities
-- 🤖 **Intelligent Task Execution** using Google Gemini 2.5 Pro
+- 🤖 **Intelligent Task Execution** using Google Gemini models (2.5 Pro, 2.5 Flash, etc.)
 - 🛡️ **Built-in Safety Controls** with human-in-the-loop confirmation
-- 🏗️ **Production-Ready Architecture** following enterprise standards
+- 🏗️ **Production-Ready Architecture** following Vercel AI SDK patterns
 - 📊 **Comprehensive Monitoring** and detailed execution logs
 - 🔒 **Security-First Design** with domain allowlists and risk pattern detection
+- 🔗 **Official Google Integration** using `@ai-sdk/google` provider
 
 ### Technical Stack
 - **Vercel AI SDK** - Enterprise-grade agent framework
-- **Google Gemini 2.5 Pro** - Advanced language model
+- **@ai-sdk/google** - Official Google Generative AI provider
+- **Google Gemini Models** - 2.5 Pro, 2.5 Flash, and other available models
 - **Playwright** - Browser automation engine
 - **TypeScript** - Full type safety
 - **Zod Schema Validation** - Input validation

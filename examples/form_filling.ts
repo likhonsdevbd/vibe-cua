@@ -1,23 +1,25 @@
 /**
- * Form Filling Example
- * Demonstrates the production computer use agent with form automation
+ * Form Filling Example - Google AI Computer Use Agent
+ * Demonstrates the Google AI computer use agent with form automation
  * 
  * This example shows how to safely automate form filling while maintaining
- * security by avoiding sensitive data entry and requiring user confirmation.
+ * security by avoiding sensitive data entry and requiring user confirmation
+ * using Vercel AI SDK with Google Generative AI provider.
  * 
  * Author: MiniMax Agent
+ * Provider: Google Generative AI via @ai-sdk/google
  */
 
-import { createComputerUseAgent, EnvironmentConfig, SafetyConfig } from '../production_agent';
+import { GoogleAIComputerAgent } from '../google_ai_computer_agent';
 
 async function main() {
-  console.log('📝 Form Filling Example - Production Computer Use Agent');
+  console.log('📝 Form Filling Example - Google AI Computer Use Agent');
   console.log('='.repeat(60));
 
   // Configuration
-  const config: EnvironmentConfig = {
-    apiKey: process.env.GOOGLE_API_KEY!,
-    model: 'google/gemini-2.5-pro',
+  const config = {
+    apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY,
+    model: 'gemini-2.5-pro',
     maxSteps: 12,
     headless: false, // Set to true for production
     safetyStrict: true,
@@ -26,37 +28,14 @@ async function main() {
     timeoutMs: 25000
   };
 
-  // Enhanced safety configuration for form filling
-  const safety: SafetyConfig = {
-    strict: true,
-    requireConfirmation: true,
-    allowedDomains: [
-      '*.google.com',
-      '*.forms.google.com',
-      '*.docs.google.com',
-      '*.htmltest.dev' // For testing purposes
-    ],
-    blockedActions: [
-      'delete_account',
-      'make_payment',
-      'enter_password',
-      'accept_terms',
-      'download_file',
-      'install_software',
-      'submit_final'
-    ],
-    riskPatterns: [
-      'password', 'credit card', 'bank', 'financial', 'money',
-      'ssn', 'social security', 'driver license',
-      'delete', 'remove', 'install', 'download',
-      'sudo', 'admin', 'root', 'api_key', 'secret', 'private'
-    ]
-  };
-
-  // Create agent
-  const agent = createComputerUseAgent(config, safety);
+  // Create Google AI computer agent
+  const agent = new GoogleAIComputerAgent(config);
 
   try {
+    // Initialize the agent
+    await agent.initialize();
+    console.log('✅ Agent initialized successfully');
+
     // Form filling task with safe, test data
     const task = `
     Navigate to https://www.htmltest.dev/j/0b1a4c23e8d0 (a test form).
@@ -64,7 +43,7 @@ async function main() {
     - Name: "Test User"  
     - Email: "test@example.com"
     - Subject: "Automation Test"
-    - Message: "This is a test of the computer use agent for form automation"
+    - Message: "This is a test of the Google AI computer use agent for form automation"
     Take a screenshot before submission.
     Do NOT submit the form - this is just a test.
     `;
@@ -79,32 +58,34 @@ async function main() {
     console.log();
 
     // Execute the task
-    const result = await agent.executeTask(task, initialUrl);
+    const result = await agent.runTask(task, initialUrl);
 
     // Display results
     console.log('\n📊 FORM FILLING RESULTS');
     console.log('='.repeat(35));
     console.log(`✅ Task Completed: ${result.success}`);
     console.log(`⏱️  Execution Time: ${result.executionTime}ms`);
-    console.log(`🔄 Steps Taken: ${result.steps.length}`);
-    console.log(`🌐 Final URL: ${result.metadata.finalUrl}`);
+    console.log(`🔄 Steps Taken: ${result.totalSteps}`);
+    console.log(`🌐 Final URL: ${result.finalURL}`);
+    console.log(`📄 Page Title: ${result.finalTitle}`);
     console.log();
 
-    if (result.finalResponse) {
+    if (result.result) {
       console.log('📝 AGENT RESPONSE:');
-      console.log(result.finalResponse);
+      console.log(result.result);
       console.log();
     }
 
-    // Display detailed execution log
-    console.log('📋 DETAILED EXECUTION LOG:');
-    console.log('='.repeat(35));
-    const logs = agent.getExecutionLog();
-    logs.forEach((log, index) => {
-      const timestamp = new Date(log.timestamp).toISOString().substr(11, 12);
-      const prefix = log.level === 'error' ? '❌' : log.level === 'warning' ? '⚠️' : 'ℹ️';
-      console.log(`[${timestamp}] ${prefix} ${log.message}`);
-    });
+    // Display session information
+    const sessionInfo = agent.getSessionInfo();
+    console.log('📋 SESSION INFO:');
+    console.log('='.repeat(25));
+    console.log(`🆔 Session ID: ${sessionInfo.sessionId}`);
+    console.log(`⏰ Start Time: ${new Date(sessionInfo.startTime).toISOString()}`);
+    console.log(`📊 Current Step: ${sessionInfo.currentStep}`);
+    console.log(`🌐 Current URL: ${sessionInfo.currentURL}`);
+    console.log(`📄 Page Title: ${sessionInfo.pageTitle}`);
+    console.log();
 
     // Safety analysis
     console.log('\n🛡️  SAFETY ANALYSIS:');
@@ -119,9 +100,10 @@ async function main() {
     console.log('\n📈 PERFORMANCE METRICS:');
     console.log('='.repeat(28));
     console.log(`📊 Success Rate: ${result.success ? '100%' : '0%'}`);
-    console.log(`⏱️  Average Step Time: ${(result.executionTime / Math.max(result.steps.length, 1)).toFixed(0)}ms`);
-    console.log(`🔄 Total Steps: ${result.steps.length}`);
-    console.log(`🤖 Model: ${result.metadata.model}`);
+    console.log(`⏱️  Average Step Time: ${(result.executionTime / Math.max(result.totalSteps, 1)).toFixed(0)}ms`);
+    console.log(`🔄 Total Steps: ${result.totalSteps}`);
+    console.log(`🤖 Model: ${config.model}`);
+    console.log(`🏢 Provider: Google Generative AI via @ai-sdk/google`);
 
     // Security verification
     console.log('\n🔐 SECURITY VERIFICATION:');
@@ -132,6 +114,11 @@ async function main() {
     console.log('✅ Form submission blocked as expected');
     console.log('✅ All actions logged for audit');
 
+    // Save session data
+    const sessionFile = `./form_session_${Date.now()}.json`;
+    await agent.saveSession(sessionFile);
+    console.log(`💾 Session data saved to: ${sessionFile}`);
+
   } catch (error) {
     console.error('❌ Error occurred during form filling test:', error);
     console.log('\n💡 This is expected behavior in some cases:');
@@ -140,20 +127,22 @@ async function main() {
     console.log('• Safety checks may block certain actions');
     console.log('\n🔧 To test with a real form:');
     console.log('1. Replace the test URL with a real form URL');
-    console.log('2. Update allowedDomains in safety config');
+    console.log('2. Update allowedDomains in agent configuration');
     console.log('3. Ensure you have user confirmation for any real submissions');
+    console.log('4. Set up proper environment variables (GOOGLE_GENERATIVE_AI_API_KEY)');
 
   } finally {
     // Clean up
-    await agent.cleanup();
+    await agent.close();
+    console.log('\n🧹 Agent closed successfully');
   }
 }
 
 // Advanced configuration for custom use cases
-export function createFormFillingAgent(config: Partial<EnvironmentConfig> = {}): EnvironmentConfig {
+export function createFormFillingConfig(config: Partial<typeof config> = {}) {
   return {
-    apiKey: process.env.GOOGLE_API_KEY!,
-    model: 'google/gemini-2.5-pro',
+    apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY,
+    model: 'gemini-2.5-pro',
     maxSteps: 10,
     headless: true, // Recommended for production form filling
     safetyStrict: true,
@@ -165,28 +154,13 @@ export function createFormFillingAgent(config: Partial<EnvironmentConfig> = {}):
 }
 
 // Example of configuring for specific form types
-export function configureForContactForms(): SafetyConfig {
-  return {
-    strict: true,
-    requireConfirmation: true,
-    allowedDomains: [
-      '*.google.com',
-      '*.forms.google.com',
-      '*.typeform.com',
-      '*.wufoo.com'
-    ],
-    blockedActions: [
-      'delete_account',
-      'make_payment',
-      'enter_password',
-      'accept_terms',
-      'download_file'
-    ],
-    riskPatterns: [
-      'password', 'credit card', 'bank', 'ssn',
-      'api_key', 'secret', 'private'
-    ]
-  };
+export function createContactFormAgent() {
+  const config = createFormFillingConfig({
+    maxSteps: 8,
+    timeoutMs: 20000
+  });
+  
+  return new GoogleAIComputerAgent(config);
 }
 
 // Run the example
