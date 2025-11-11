@@ -10,7 +10,7 @@
  * Provider: Google Generative AI via @ai-sdk/google
  */
 
-import { GoogleAIComputerAgent } from '../google_ai_computer_agent';
+import { GoogleAIComputerAgent } from '../google_ai_computer_agent_clean';
 
 async function main() {
   console.log('🔍 Web Research Example - Google AI Computer Use Agent');
