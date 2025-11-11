@@ -1,15 +1,26 @@
-# Gemini 2.5 Computer Use Agent
+# Production Computer Use Agent
 
-A comprehensive computer-using agent that can autonomously perform tasks on your behalf using Google's Gemini 2.5 Computer Use model. This agent can interact with computer interfaces, navigate websites, fill forms, and automate various web-based tasks while maintaining strict safety standards.
+**A production-ready, safety-first computer use agent built with Vercel AI SDK and Google Gemini**
 
-## Features
+> ⚠️ **Note**: Gemini 2.5 Computer Use is still in preview. Use in production with appropriate monitoring and safety measures.
 
-- 🤖 **Autonomous Task Execution**: Complete complex web tasks without manual intervention
-- 🛡️ **Built-in Safety**: Human-in-the-loop confirmation for high-risk actions
-- 🌐 **Web Automation**: Navigate, click, type, scroll, and interact with web pages
-- 📊 **Task Monitoring**: Real-time feedback and execution logs
-- 🔧 **Extensible**: Custom functions and safety rules
-- 🔒 **Secure**: Sandboxed browser environment with safety checks
+This production computer use agent implements industry best practices for AI-powered automation while maintaining strict safety standards. Built using the Vercel AI SDK's Agent patterns, it provides enterprise-grade reliability, comprehensive monitoring, and security-first design.
+
+## ✨ Key Features
+
+### Core Capabilities
+- 🤖 **Intelligent Task Execution** using Google Gemini 2.5 Pro
+- 🛡️ **Built-in Safety Controls** with human-in-the-loop confirmation
+- 🏗️ **Production-Ready Architecture** following enterprise standards
+- 📊 **Comprehensive Monitoring** and detailed execution logs
+- 🔒 **Security-First Design** with domain allowlists and risk pattern detection
+
+### Technical Stack
+- **Vercel AI SDK** - Enterprise-grade agent framework
+- **Google Gemini 2.5 Pro** - Advanced language model
+- **Playwright** - Browser automation engine
+- **TypeScript** - Full type safety
+- **Zod Schema Validation** - Input validation
 
 ## Supported Actions
 
