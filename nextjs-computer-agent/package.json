@@ -11,20 +11,21 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^14.2.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
-    "@ai-sdk/google": "^1.1.0",
-    "ai": "^6.8.2",
-    "zod": "^3.23.0",
-    "playwright": "^1.47.0",
+    "@ai-sdk/google": "^2.0.31",
+    "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-slot": "^1.1.0",
+    "ai": "^5.0.92",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "framer-motion": "^11.2.0",
     "lucide-react": "^0.441.0",
+    "next": "^14.2.0",
+    "playwright": "^1.47.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
     "tailwind-merge": "^2.5.0",
     "tailwindcss-animate": "^1.0.7",
-    "framer-motion": "^11.2.0"
+    "zod": "^3.23.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",

@@ -9,15 +9,6 @@ export const metadata: Metadata = {
   description: 'Intelligent web automation and interaction using Vercel AI SDK with Google Generative AI',
   keywords: ['AI', 'Computer Use', 'Web Automation', 'Vercel AI SDK', 'Google AI'],
   authors: [{ name: 'MiniMax Agent' }],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
-  ],
   robots: {
     index: false, // This is an interactive application
     follow: false,
@@ -34,6 +25,16 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-title': 'AI Computer Agent',
     'mobile-web-app-capable': 'yes',
   }
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
 }
 
 export default function RootLayout({
@@ -85,7 +86,7 @@ export default function RootLayout({
                 We encountered an unexpected error. Please refresh the page to try again.
               </p>
               <button
-                onClick={() => window.location.reload()}
+                onClick={typeof window !== 'undefined' ? () => window.location.reload() : undefined}
                 className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
               >
                 Refresh Page
