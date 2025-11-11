@@ -1,0 +1,37 @@
+{
+  "name": "gemini-computer-use-agent",
+  "version": "1.0.0",
+  "description": "A computer-using agent powered by Gemini 2.5 that can perform tasks on your behalf",
+  "main": "computer_use_agent.js",
+  "types": "computer_use_agent.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node computer_use_agent.ts",
+    "start": "node dist/computer_use_agent.js",
+    "test": "playwright test",
+    "install-deps": "npm install && npx playwright install"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "gemini",
+    "computer-use",
+    "automation",
+    "browser",
+    "playwright"
+  ],
+  "author": "MiniMax Agent",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "playwright": "^1.48.0",
+    "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
